@@ -1,0 +1,25 @@
+.contacts__icon {
+  max-width: 35px;
+  max-height: 35px;
+  vertical-align: middle;
+}
+
+.contacts__date {
+  margin: 20px 0px 10px 0px;
+}
+
+.contacts__country {
+  margin-bottom: 20px;
+}
+
+.contacts__text {
+  padding-left: 10px;
+}
+
+.contacts__item {
+  padding: 5px 0px;
+}
+
+.contacts__item:last-child {
+  padding-bottom: 40px;
+}

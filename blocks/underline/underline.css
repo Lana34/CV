@@ -1,0 +1,25 @@
+:root {
+  --underline-bckg-1: rgba(51, 47, 47, 0.5);
+  --underline-bckg-2: rgb(121, 164, 158);
+}
+
+.underline {
+  width: 100%;
+  background: var(--underline-bckg-1);
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  width: 40%;
+  background: var(--underline-bckg-2);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.underline::after,
+.underline {
+  min-height: 6px;
+  border-radius: 70px;
+}

@@ -1,0 +1,64 @@
+:root {
+  --circle-bckg-1: rgb(121, 164, 158);
+  --circle-bckg-2: transparent;
+  --circle-border: 60px;
+  --circle-outline: black;
+  --hover-outline: rgba(63, 95, 91, 0.7);
+  --hover-color: rgb(80, 193, 178);
+  --circle-animate: animate_motion 5s 0s both infinite;
+}
+
+.skills__circle {
+  width: 70px;
+  height: 70px;
+  border-right: 10px solid var(--circle-bckg-2);
+  border-top: 10px solid var(--circle-bckg-1);
+  border-left: 10px solid var(--circle-bckg-1);
+  border-bottom: 10px solid var(--circle-bckg-1);
+  border-top-left-radius: var(--circle-border);
+  border-top-right-radius: var(--circle-border);
+  border-bottom-left-radius: var(--circle-border);
+  border-bottom-right-radius: var(--circle-border);
+  outline: 3px solid var(--circle-outline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills__circle:hover {
+  border-right: 10px solid var(--circle-bckg-2);
+  border-top: 10px solid var(--hover-color);
+  border-left: 10px solid var(--hover-color);
+  border-bottom: 10px solid var(--hover-color);
+  outline: 4px solid var(--hover-outline);
+  animation: var(--circle-animate);
+}
+
+.skills__item {
+  max-width: 450px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+@keyframes animate_motion {
+  0%,
+  20% {
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  14%,
+  18%,
+  2%,
+  6% {
+    transform: translate3d(-7px, 0, 0);
+  }
+  12%,
+  16%,
+  4%,
+  8% {
+    transform: translate3d(7px, 0, 0);
+  }
+}

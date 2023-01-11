@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400&display=swap");
+@import url("./blocks/header/header.css");
+@import url("./blocks/contacts/contacts.css");
+@import url("./blocks/about/about.css");
+@import url("./blocks/title/title.css");
+@import url("./blocks/underline/underline.css");
+@import url("./blocks/experience/experienxe.css");
+@import url("./blocks/skills/skills.css");
+@import url("./blocks/languages/languages.css");
+@import url("./blocks/slider/slider.css");
+
+:root {
+  --main-font: "Ubuntu", sans-serif;
+  --main-color-1: rgb(121, 164, 158);
+  --main-color-2: #d5d4be;
+  --font-color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.wrapper__CV {
+  max-width: 1055px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.CV {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.CV__item_color_aquamarine {
+  background: var(--main-color-1);
+  color: var(--font-color);
+  max-width: 480px;
+}
+.CV__item_color_sand {
+  background: var(--main-color-2);
+  padding: 70px 40px;
+  max-width: 575px;
+}
+
+.CV__itemWrapper {
+  padding: 0px 40px;
+}
+
+.CV__itemWrapper,
+.CV__item_color_sand {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  word-wrap: break-word;
+  font-family: var(--main-font);
+}
+
+@media (max-width: 1070px) {
+  .CV__item_color_sand {
+    box-sizing: border-box;
+    max-width: 480px;
+    padding: 60px 30px;
+  }
+}

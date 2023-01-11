@@ -1,0 +1,12 @@
+.about__text {
+  margin-top: 20px;
+  line-height: 21px;
+}
+
+@media (max-width: 500px) {
+  .about__text {
+    margin-top: 15px;
+    line-height: 19px;
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,71 @@
+:root {
+  --main-color: rgb(80, 193, 178);
+  --hover-color-1: rgba(50, 120, 117, 0.7);
+  --hover-color-2: rgba(236, 236, 236, 0.7);
+  --avtive-color: rgb(36, 34, 34);
+  --btn-color: rgba(62, 60, 60, 0.6);
+  --btn-font: "Ubuntu", sans-serif;
+  --btn-text-color: rgb(215, 220, 225);
+}
+
+.slider,
+.slider__img {
+  max-width: 100%;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+.slider__line {
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+}
+
+.slider__btns {
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+  gap: 13px;
+  padding: 0px 10px;
+}
+
+.slider__btnPrev,
+.slider__btnNext {
+  border: 2px solid var(--main-color);
+  background: var(--btn-color);
+  color: var(--btn-text-color);
+  padding: 5px 25px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--btn-font);
+}
+
+.slider__btnPrev:hover,
+.slider__btnNext:hover {
+  border: 2px solid var(--hover-color-2);
+  background: var(--hover-color-1);
+  animation: animate_grow 2s infinite;
+}
+
+.slider__btnPrev:active,
+.slider__btnNext:active {
+  border: 2px solid var(--main-color);
+  background: var(--avtive-color);
+  color: var(--main-color);
+}
+
+@keyframes animate_grow {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}

@@ -1,0 +1,51 @@
+:root {
+  --title-color-1: rgb(121, 164, 158);
+  --title-color-2: white;
+  --hover-title-color-1: rgba(80, 193, 178);
+  --hover-title-color-2: #bcbba9;
+  --name-font-size: 35px;
+  --title-font-size: 25px;
+  --title-animation: animate_grow 2s infinite;
+}
+
+.title_color_white {
+  color: var(--title-color-2);
+}
+.title_color_aquamarine {
+  color: var(--title-color-1);
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: var(--title-font-size);
+  font-weight: 700;
+}
+
+.title_padding_left {
+  font-size: var(--name-font-size);
+  padding: 40px 0px;
+  text-transform: capitalize;
+}
+
+.title_color_aquamarine:hover {
+  color: var(--hover-title-color-1);
+  animation: var(--title-animation);
+}
+
+.title_color_white:hover,
+.title_padding_left:hover {
+  color: var(--hover-title-color-2);
+  animation: var(--title-animation);
+}
+
+@keyframes animate_grow {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
